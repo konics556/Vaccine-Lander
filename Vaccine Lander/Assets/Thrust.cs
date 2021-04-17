@@ -11,11 +11,11 @@ public class Thrust : MonoBehaviour
     {
         if (Input.GetAxisRaw("RightThrust") > 0 && IsRight == true)
         {
-            rb.AddRelativeForce(new Vector2(0, ForceValue));
+            rb.AddRelativeForce(new Vector2(0, ForceValue * Time.deltaTime));
         }
         else if (Input.GetAxisRaw("LeftThrust") > 0 && IsRight == false)
         {
-            rb.AddRelativeForce(new Vector2(0, ForceValue));
+            rb.AddRelativeForce(new Vector2(0, ForceValue * Time.deltaTime));
         }
         // rb.AddRelativeForce(new Vector2(HorForce * ForceValue, 0));
     }
