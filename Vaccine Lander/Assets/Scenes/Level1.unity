@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 1406734858}
   m_Layer: 0
   m_Name: landingPad
-  m_TagString: Finish
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,7 +1137,7 @@ SliderJoint2D:
     m_MaximumMotorForce: 500
   m_UseLimits: 1
   m_TranslationLimits:
-    m_LowerTranslation: 0
+    m_LowerTranslation: 0.55
     m_UpperTranslation: 1.35
 --- !u!234 &1853742801
 SliderJoint2D:
@@ -1163,7 +1163,7 @@ SliderJoint2D:
     m_MaximumMotorForce: 500
   m_UseLimits: 1
   m_TranslationLimits:
-    m_LowerTranslation: 0
+    m_LowerTranslation: 0.55
     m_UpperTranslation: 1.35
 --- !u!114 &1853742802
 MonoBehaviour:
@@ -1178,6 +1178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bb: {fileID: 1853742791}
+  LeftGear: {fileID: 1853742800}
+  RightGear: {fileID: 1853742801}
 --- !u!1 &1968336328
 GameObject:
   m_ObjectHideFlags: 0
