@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26111114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -5.5, z: 0}
+  m_LocalPosition: {x: -0.35, y: -5.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1853742794}
@@ -338,7 +338,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.25
+  orthographic size: 22.27
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -516,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107084875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.193, y: -5.604, z: -1}
+  m_LocalPosition: {x: -1, y: -4.9, z: -1}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1853742794}
@@ -683,7 +683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177456451}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.187, y: -5.616, z: -1}
+  m_LocalPosition: {x: 1, y: -4.9, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1853742794}
@@ -806,7 +806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406734854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.31, y: -15.05, z: 0}
+  m_LocalPosition: {x: -12.42, y: -14.26, z: 0}
   m_LocalScale: {x: 15, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -844,6 +844,7 @@ GameObject:
   - component: {fileID: 1853742798}
   - component: {fileID: 1853742801}
   - component: {fileID: 1853742800}
+  - component: {fileID: 1853742802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -946,8 +947,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0.5
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0.2
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1051,7 +1052,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.8, y: 11}
+  m_ConnectedAnchor: {x: 0.7, y: 11}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!255 &1853742797
@@ -1069,7 +1070,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.8, y: 11}
+  m_ConnectedAnchor: {x: -0.7, y: 11}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!231 &1853742798
@@ -1086,12 +1087,12 @@ SpringJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.83, y: -4.38}
+  m_Anchor: {x: -0.93, y: -4.7}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.276693
+  m_Distance: 0.21189646
   m_DampingRatio: 0
-  m_Frequency: 10
+  m_Frequency: 5
 --- !u!231 &1853742799
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1106,12 +1107,12 @@ SpringJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.83, y: -4.38}
+  m_Anchor: {x: 0.93, y: -4.7}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.2865244
+  m_Distance: 0.21189646
   m_DampingRatio: 0
-  m_Frequency: 10
+  m_Frequency: 5
 --- !u!234 &1853742800
 SliderJoint2D:
   m_ObjectHideFlags: 0
@@ -1129,15 +1130,15 @@ SliderJoint2D:
   m_Anchor: {x: -0.83, y: -4.38}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureAngle: 1
-  m_Angle: -106.51871
-  m_UseMotor: 0
+  m_Angle: -108.10377
+  m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+    m_MotorSpeed: 1
+    m_MaximumMotorForce: 500
+  m_UseLimits: 1
   m_TranslationLimits:
     m_LowerTranslation: 0
-    m_UpperTranslation: 0
+    m_UpperTranslation: 1.35
 --- !u!234 &1853742801
 SliderJoint2D:
   m_ObjectHideFlags: 0
@@ -1155,15 +1156,28 @@ SliderJoint2D:
   m_Anchor: {x: 0.83, y: -4.38}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureAngle: 1
-  m_Angle: -73.889435
-  m_UseMotor: 0
+  m_Angle: -71.89624
+  m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+    m_MotorSpeed: 1
+    m_MaximumMotorForce: 500
+  m_UseLimits: 1
   m_TranslationLimits:
     m_LowerTranslation: 0
-    m_UpperTranslation: 0
+    m_UpperTranslation: 1.35
+--- !u!114 &1853742802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853742790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d317c7678f1e734f9344e43a398d307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bb: {fileID: 1853742791}
 --- !u!1 &1968336328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968336328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -5.5, z: 0}
+  m_LocalPosition: {x: 0.35, y: -5.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1853742794}
