@@ -17,7 +17,11 @@ public class CheckDocking : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (collider.IsTouching(DockingRegionCollider))
         {
-            Debug.Log("Docked");
+            if (GameObject.Find("landingPad").GetComponent<Landing>().fl) { 
+                Debug.Log("Docked");
+                StartCoroutine(GameObject.Find("GameManager").GetComponent<GameManager>().GameOverWin());
+            }
+            
         }
     }
 }

@@ -4,7 +4,8 @@ using System.Collections;
 public class Landing : MonoBehaviour
 {
     public Collider2D Base;
-    private bool fl = false;
+    public bool fl = false;
+    public GameManager manager;
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.collider.tag);
@@ -20,7 +21,9 @@ public class Landing : MonoBehaviour
         if (collision.collider.IsTouching(Base) && !fl)
         {
             fl = true;
-            Debug.Log("WIN");
+            StartCoroutine(manager.Landed());
+            //StartCoroutine(manager.GameOverWin());
+            //Debug.Log("WIN");
         }
     }
 }
